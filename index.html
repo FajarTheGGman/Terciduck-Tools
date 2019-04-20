@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" src=".image/icon.png" type="image/png">
+    <link rel="icon" href=".image/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>T E R C Y D U C K</title>
+</head>
+
+<script>
+function asw(){
+var x = new XMLHttpRequest();
+
+const input = document.getElementById("in").value;
+
+x.responseType = "json";
+x.open("GET", "http://ip-api.com/json/" + input, true);
+x.send();
+
+x.onreadystatechange = a;
+
+function a(){
+    if (x.status == 200){
+        var a1 = document.getElementById("a1")
+        var a2 = document.getElementById("a2")
+        var a3 = document.getElementById("a3")
+        var a4 = document.getElementById("a4")
+        var my = document.getElementById("my")
+
+        a1.innerHTML = "IP : " + x.response.query;
+        a2.innerHTML = "KOTA : " + x.response.city;
+        a3.innerHTML = "KOORDINAT : " + x.response.lat;
+        a4.innerHTML = "WAKTU : " + x.response.timezone;
+    }else{
+        var error = document.getElementById("error");
+        error.innerHTML = "IP Tidak Terdaftar"
+    }
+}
+}
+</script>
+
+<style>
+body{
+    background: url("back.jpg");
+    background-size: cover;
+}
+
+.main{
+    margin-top: 5%;
+    width: 40%;
+    background: black;
+    margin-left: 30%;
+    opacity: 0.7;
+    border: 2px solid lime;
+}
+
+.main h1{
+    font: 25px sans-serif;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: orange;
+    text-align: center;
+    margin-top: 6%;
+}
+
+#a1, #a2, #a3, #a4{
+    color: greenyellow;
+    font: 15px sans-serif;
+    text-align: center;
+}
+
+#in{
+    background: cyan;
+    color: red;
+    padding: 15px;
+    border: 3px solid blueviolet;
+}
+
+#btn{
+    padding: 15px;
+    background: red;
+    border: 3px solid royalblue;
+    margin: 15px
+}
+
+#in:hover{
+    background: lime;
+    border-radius: 25px;
+    transition: 1s;
+}
+
+#btn:hover{
+    background: lime;
+    border-radius: 25px;
+    transition: 1s;
+}
+
+h2{
+    font: 35px sans-serif;
+    background: linear-gradient(to right, cyan, lime);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#about{
+    font: 25px sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+#error{
+    color: red;
+    font: 30px sans-serif;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+</style>
+
+<body>
+    <center>
+    <h2>T E R C Y D U C K</h2>
+</center>
+    <div class="main">
+        <h1>Tracking Coy</h1>
+        <p id="a1"></p>
+        <p id="a2"></p>
+        <p id="a3"></p>
+        <p id="a4"></p>
+        <p id="error"></p>
+        <center>
+        <div class="user">
+        <input type="text" id="in" placeholder="Masukan IP">
+        <button type="button" id="btn" onclick="asw()">Klick Gw</button>
+        <center>
+            <div class="about"></div>
+        <h2>Version 1.0.0</h2>
+        <h2>Coder : Fajar Firdaus</h2>
+        <h2>Github : FajarTheGGman</h2>
+    </center>
+    </div>
+</center>
+    </div>
+</body>
+</html>
