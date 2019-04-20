@@ -1,7 +1,7 @@
 # Terciduck-Tools
 #Buat lacak ip orang
 
-![alt text](https://github.com/FajarTheGGman/Terciduck-Tools/blob/master/.img/back.jpg)
+![alt text](https://github.com/FajarTheGGman/Terciduck-Tools/blob/master/.img/pict.png)
 
 # Cara menjalankan
 <pre>
