@@ -12,3 +12,6 @@
 5.tutup cmd nya
 6.klick run.bat
 </pre>
+
+# Support Me :)
+![donate](https://raw.githubusercontent.com/FajarTheGGman/F-Tools/master/.images/donate.jpeg)
